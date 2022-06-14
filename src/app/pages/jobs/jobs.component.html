@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <img class="illustration" src="assets/images/bg-header-desktop.svg" alt="" />
+
+    <app-filters [(filters)]="filters" (filtersChange)="syncJobs()"></app-filters>
+
+    <ul>
+        <ng-container *ngFor="let job of jobs">
+            <li>
+                <app-card [job]="job" (tagClick)="addFilter($event)"></app-card>
+            </li>
+        </ng-container>
+    </ul>
+</div>

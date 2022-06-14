@@ -1,0 +1,27 @@
+<div class="card">
+    <i *ngIf="job.isFeatured" class="vertical-line"></i>
+
+    <div class="info">
+        <img [src]="job.logo" alt="Company's Logo" />
+
+        <div class="top-row">
+            <div class="company">{{ job.company }}</div>
+            <div *ngIf="job.isNew" class="new">NEW!</div>
+            <div *ngIf="job.isFeatured" class="featured">FEATURED</div>
+        </div>
+
+        <div class="title">{{ job.title }}</div>
+
+        <div class="bottom-row">
+            <div class="posted-at">{{ job.postedAt }}</div>
+            <i class="dot">-</i>
+            <div class="contract">{{ job.contract }}</div>
+            <i class="dot">-</i>
+            <div class="location">{{ job.location }}</div>
+        </div>
+    </div>
+
+    <ul>
+        <li *ngFor="let tag of job.tags" (click)="tagClickHandler(tag)">{{ tag }}</li>
+    </ul>
+</div>

@@ -1,0 +1,10 @@
+<div class="wrapper" [class.inert]="!filters?.size">
+    <ul>
+        <li *ngFor="let filter of filters">
+            <div class="text">{{ filter }}</div>
+            <button (click)="removeFilter(filter)">X</button>
+        </li>
+    </ul>
+
+    <button (click)="clearFilters()">Clear</button>
+</div>

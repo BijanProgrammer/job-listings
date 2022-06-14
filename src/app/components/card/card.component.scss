@@ -1,0 +1,123 @@
+.card {
+    background-color: var(--color--gray-lightest);
+    box-shadow: 0 0.4rem 1rem var(--color--box-shadow);
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: var(--shell-padding);
+
+    border-radius: 0.5rem;
+
+    .vertical-line {
+        background-color: var(--color--desaturated-dark-cyan);
+
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+
+        width: 0.4rem;
+        height: 100%;
+    }
+
+    .info {
+        display: grid;
+        grid-template-areas: 'img top-row' 'img title' 'img bottom-row';
+        column-gap: 2rem;
+        row-gap: 1rem;
+
+        img {
+            grid-area: img;
+
+            height: 100%;
+            aspect-ratio: 1 / 1;
+
+            border-radius: 999rem;
+        }
+
+        .top-row {
+            grid-area: top-row;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .company {
+                color: var(--color--desaturated-dark-cyan);
+
+                font-size: 1.4rem;
+            }
+
+            .new,
+            .featured {
+                color: var(--color--light-grayish-cyan--filter);
+
+                padding: 0.5rem 1rem;
+
+                border-radius: 999rem;
+
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .new {
+                background-color: var(--color--desaturated-dark-cyan);
+            }
+
+            .featured {
+                background-color: var(--color--very-dark-grayish-cyan);
+            }
+        }
+
+        .title {
+            grid-area: title;
+
+            color: var(--color--desaturated-dark-cyan);
+
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .bottom-row {
+            grid-area: bottom-row;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            color: var(--color--dark-grayish-cyan);
+
+            font-size: 1.2rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        margin-inline-start: auto;
+
+        li {
+            background-color: var(--color--light-grayish-cyan--filter);
+            color: var(--color--desaturated-dark-cyan);
+
+            padding: 0.8rem 1rem;
+
+            border-radius: 0.4rem;
+
+            font-size: 1.4rem;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color--desaturated-dark-cyan);
+                color: var(--color--light-grayish-cyan--filter);
+            }
+        }
+    }
+}

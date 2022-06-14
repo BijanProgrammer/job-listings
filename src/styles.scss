@@ -1,0 +1,59 @@
+// VARIABLES
+:root {
+    --color--gray-lightest: hsl(0, 0%, 98%);
+
+    --color--desaturated-dark-cyan: hsl(180, 29%, 50%);
+    --color--light-grayish-cyan--background: hsl(180, 52%, 96%);
+    --color--light-grayish-cyan--filter: hsl(180, 31%, 95%);
+    --color--dark-grayish-cyan: hsl(180, 8%, 52%);
+    --color--very-dark-grayish-cyan: hsl(180, 14%, 20%);
+    --color--box-shadow: hsl(180, 14%, 20%, 0.1);
+
+    --shell-padding: 3rem;
+
+    --full-width: 120rem;
+    --full-width-padding-inline: calc(max(100% - var(--full-width), var(--shell-padding)) / 2);
+}
+
+// RESET
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+}
+
+html {
+    scrollbar-gutter: stable;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 62.5%;
+}
+
+button {
+    border: none;
+
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+// MAIN
+body {
+    background-color: var(--color--light-grayish-cyan--background);
+    color: var(--color--body-foreground);
+
+    width: 100%;
+
+    font-size: 1.6rem;
+}
